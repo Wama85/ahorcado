@@ -1,18 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Juego del Ahorcado</title>
-    
-</head>
-<body>
-    <h1>Juego - Ahorcado</h1>
-    <p>Adivina la palabra:</p>
-    <div id="palabra"></div>
-    <p>Letras adivinadas:</p>
-    <div id="letras"></div>
-    <p>Intentos restantes: <span id="intentos"></span></p>
-    <input type="text" id="letra">
-    <button onclick="adivinar()">Adivinar</button>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>JUEGO EL AHORCADO</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+      <div class="main-container">
+
+        <h1 class="titulo">Juego del ahorcado</h1>
+        
+        <details>
+            <summary>Integrantes:</summary>
+            <ol>
+            <li>Susan Milenka Cespedes Lazcano</li>
+            <li>Jhoselin Solangel Quiroga Quispe</li>
+            <li>Marlon Tomas Marzo Fernandez</li>
+            <li>Sebastian Daniel Beller Sanzetenea</li>
+            <li>Wilner Antonio Mena Aguilar</li>
+        </ol>
+        </details>
+        <h1 id="msg-final"></h1>
+        <h3 id="acierto"></h3>
+        <div class="flex-row no-wrap">
+          <h2 class="palabra" id="palabra"></h2>
+          <picture>
+            <img src="img/ahorcado_6.png" alt="" id="image6">
+            <img src="img/ahorcado_5.png" alt="" id="image5">
+            <img src="img/ahorcado_4.png" alt="" id="image4">
+            <img src="img/ahorcado_3.png" alt="" id="image3">
+            <img src="img/ahorcado_2.png" alt="" id="image2">
+            <img src="img/ahorcado_1.png" alt="" id="image1">
+            <img src="img/ahorcado_0.png" alt="" id="image0">
+          </picture>
+        </div>
+        <div class="flex-row" id="turnos">
+          <div class="col">
+            <h3>Intentos restantes: <span id="intentos">6</span></h3>
+          </div>
+          <div class="col">
+            <button onclick="inicio()" id="reset" class="boton">Elegir otra palabra</button>
+            <button onclick="pista()" id="pista"class="boton">Dame una pista!</button>
+            <span id="hueco-pista"></span>
+          </div>
+          </div>
+        
+        <div class="flex-row">
+          <div class="col">
+            <div class="flex-row" id="abcdario">
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+
+      </div>
     <script src="ahorcado.js"></script>
-</body>
+  </body>
 </html>
